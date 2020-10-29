@@ -1,19 +1,16 @@
-import React, { useContext } from 'react';
-import { Context } from '../../context/Context';
+import React from 'react';
 import { useCharacters } from '../../hooks/characterData';
+import { useColorTheme } from '../../hooks/characterData';
 import CharacterItem from './CharacterItem';
+import css from './CharacterList.css';
 
 
 const CharacterList = () => {
-  const { dkColor, ltColor } = useContext(Context);
+  const { colorTheme } = useColorTheme();
   const { characters, loading } = useCharacters();
 
   if(loading) return <h1>Loading!</h1>;
-  
-  const style = {
-    darkColor: dkColor,
-    lightColor: ltColor
-  };
+
 
   
   const characterElements = characters.map(character => (
@@ -23,8 +20,8 @@ const CharacterList = () => {
   ));
 
   return (
-    <div style={style}>
-      <ul>
+    <div styles={colorTheme}>
+      <ul className={css.CharacterList}>
         {characterElements}
       </ul>
     </div>

@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 
-export const Context = React.createContext();
+export const ColorContext = React.createContext();
 
-export const Provider = ({ children }) => {
+export const ColorProvider = ({ children }) => {
   const [dkColor, setDkColor] = useState('#545E75');
   const [ltColor, setLtColor] = useState('#F7F7FF');
   
@@ -12,9 +12,17 @@ export const Provider = ({ children }) => {
     if(ltColor === '#545E75')
       setLtColor('F7F7FF');
   };
+
+    
+  const style = {
+    dkColor,
+    ltColor,
+    handleDarkColor
+  };
+
   return (
-    <Context.Provider value ={{ dkColor, ltColor, handleDarkColor }}>
+    <ColorContext.Provider value ={style}>
       {children}
-    </Context.Provider>
+    </ColorContext.Provider>
   );
 };

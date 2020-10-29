@@ -1,5 +1,19 @@
 import React from 'react';
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route
+} from 'react-router-dom';
+import CharacterList from '../Characters/CharacterList';
+import Header from '../Header/Header';
 
 export default function App() {
-  return <h1>Hello World</h1>;
+  return (
+    <Router>
+      <Header/>
+      <Switch>
+        <CharacterList exact path="/" component={CharacterList}/>
+      </Switch> 
+    </Router>);
+
 }
