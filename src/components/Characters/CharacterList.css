@@ -3,4 +3,5 @@
   grid-template-columns: repeat(5, 1fr);
   list-style: none;
   text-align: center;
+  background-color: #F7F7FF;
 }

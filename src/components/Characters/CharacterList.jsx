@@ -1,6 +1,5 @@
 import React from 'react';
-import { useCharacters } from '../../hooks/characterData';
-import { useColorTheme } from '../../hooks/characterData';
+import { useCharacters, useColorTheme } from '../../hooks/characterData';
 import CharacterItem from './CharacterItem';
 import css from './CharacterList.css';
 

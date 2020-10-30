@@ -1,11 +1,11 @@
 import React from 'react';
 import { render } from 'react-dom';
 import App from './components/app/App';
-import { ContextProvider } from './context/Context';
+import { ColorProvider } from './context/ColorContext';
 
 render(
-  <ContextProvider>
+  <ColorProvider>
     <App />
-  </ContextProvider>,
+  </ColorProvider>,
   document.getElementById('root')
 );

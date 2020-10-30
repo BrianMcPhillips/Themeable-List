@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 import { getCharacters } from '../services/lastAirBenderApi';
 import { useContext } from 'react';
-import { Context } from '../context/context';
+import { ColorContext } from '../context/ColorContext';
 
 export const useCharacters = () => {
   const [characters, setCharacters] = useState([]);
@@ -20,6 +20,6 @@ export const useCharacters = () => {
 };
 
 export const useColorTheme = () => {
-  const { colorTheme, handleDarkColor } = useContext(Context);
+  const { colorTheme, handleDarkColor } = useContext(ColorContext);
   return { colorTheme, handleDarkColor };
 };

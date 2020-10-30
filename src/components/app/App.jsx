@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Header/>
       <Switch>
-        <CharacterList exact path="/" component={CharacterList}/>
+        <Route exact path="/" component={CharacterList}/>
       </Switch> 
     </Router>);
 

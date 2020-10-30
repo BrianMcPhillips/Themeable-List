@@ -5,7 +5,7 @@ export const getCharacters = async() => {
   const json = await res.json();
   if(!res.ok) throw 'Bad API call unable to fetch';
   
-  return json.results.map(character => ({
+  return json.map(character => ({
     id: character._id,
     name: character.name,
     image: character.photoUrl

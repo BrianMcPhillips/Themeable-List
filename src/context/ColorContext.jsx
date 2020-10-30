@@ -10,7 +10,7 @@ export const ColorProvider = ({ children }) => {
     if(dkColor === '#F7F7FF')
       setDkColor('#545E75');
     if(ltColor === '#545E75')
-      setLtColor('F7F7FF');
+      setLtColor('#F7F7FF');
   };
 
     

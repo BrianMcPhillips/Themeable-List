@@ -1,8 +1,9 @@
-import React, { useContext } from 'react';
-import { Context } from '../../context/Context';
+import React from 'react';
+import { useColorTheme } from '../../hooks/characterData';
+
 
 const Header = () => {
-  const { handleDarkColor } = useContext(Context);
+  const { handleDarkColor } = useColorTheme();
 
   return (
     <div>
