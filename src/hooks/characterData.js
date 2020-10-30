@@ -6,12 +6,12 @@ import { ColorContext } from '../context/ColorContext';
 export const useCharacters = () => {
   const [characters, setCharacters] = useState([]);
   const [loading, setLoading] = useState(true);
-
+  const { dkColor } = useColorTheme();
   useEffect(() => {
     getCharacters()
       .then(jsonCharacters => setCharacters(jsonCharacters))
       .finally(() => setLoading(false)); 
-  }, []);
+  }, [dkColor]);
 
   return {
     characters,
@@ -20,6 +20,6 @@ export const useCharacters = () => {
 };
 
 export const useColorTheme = () => {
-  const { colorTheme, handleDarkColor } = useContext(ColorContext);
-  return { colorTheme, handleDarkColor };
+  const { dkColor, handleDarkColor } = useContext(ColorContext);
+  return { dkColor, handleDarkColor };
 };

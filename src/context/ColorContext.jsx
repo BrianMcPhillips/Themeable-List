@@ -3,20 +3,20 @@ import React, { useState } from 'react';
 export const ColorContext = React.createContext();
 
 export const ColorProvider = ({ children }) => {
-  const [dkColor, setDkColor] = useState('#545E75');
-  const [ltColor, setLtColor] = useState('#F7F7FF');
+  const [dkColor, setDkColor] = useState('lightColor');
+  
   
   const handleDarkColor = () => {
-    if(dkColor === '#F7F7FF')
-      setDkColor('#545E75');
-    if(ltColor === '#545E75')
-      setLtColor('#F7F7FF');
+    if(dkColor === 'lightColor')
+      setDkColor('darkColor');
+    if(dkColor === 'darkColor')
+      setDkColor('lightColor');
+
   };
 
     
   const style = {
     dkColor,
-    ltColor,
     handleDarkColor
   };
 

@@ -3,5 +3,17 @@
   grid-template-columns: repeat(5, 1fr);
   list-style: none;
   text-align: center;
-  background-color: #F7F7FF;
+
 }
+
+.lightColor {
+
+  color: black;
+  background-color: white;
+}
+
+.darkColor {
+
+  color: white;
+  background-color: black;
+} 
