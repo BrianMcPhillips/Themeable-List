@@ -2,10 +2,11 @@ import React from 'react';
 import { useCharacters, useColorTheme } from '../../hooks/characterData';
 import CharacterItem from './CharacterItem';
 import css from './CharacterList.css';
+import PropTypes from 'prop-types';
 
-const CharacterList = () => {
+const CharacterList = ({ page }) => {
   const { dkColor } = useColorTheme();
-  const { characters, loading } = useCharacters();
+  const { characters, loading } = useCharacters(page);
 
   if(loading) return <h1>Loading!</h1>;
   
@@ -24,6 +25,10 @@ const CharacterList = () => {
       </ul>
     </div>
   );
+};
+
+CharacterList.propTypes = {
+  page: PropTypes.number
 };
 
 export default CharacterList;

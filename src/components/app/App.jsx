@@ -4,7 +4,7 @@ import {
   Switch,
   Route
 } from 'react-router-dom';
-import CharacterList from '../Characters/CharacterList';
+import CharacterListPage from '../../pages/CharacterListPage';
 import Header from '../Header/Header';
 
 export default function App() {
@@ -12,7 +12,7 @@ export default function App() {
     <Router>
       <Header/>
       <Switch>
-        <Route exact path="/" component={CharacterList}/>
+        <Route exact path="/" component={CharacterListPage}/>
       </Switch> 
     </Router>);
 
