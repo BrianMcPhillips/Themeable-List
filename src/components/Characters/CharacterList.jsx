@@ -17,7 +17,7 @@ const CharacterList = ({ page }) => {
   ));
 
   return (
-    <div>
+    <div data-testid="characters">
       <ul className=
         {`${css.CharacterList} ${dkColor === 'darkColor' ? 
           css.darkColor : css.lightColor}`}>
