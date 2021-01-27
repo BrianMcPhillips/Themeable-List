@@ -1,0 +1,19 @@
+.CharacterList {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  list-style: none;
+  text-align: center;
+
+}
+
+.lightColor {
+
+  color: black;
+  background-color: white;
+}
+
+.darkColor {
+
+  color: white;
+  background-color: black;
+} 

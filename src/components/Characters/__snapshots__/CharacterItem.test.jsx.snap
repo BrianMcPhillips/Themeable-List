@@ -1,0 +1,15 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`CharacterItem component should render a Character to the page 1`] = `
+<DocumentFragment>
+  <figure>
+    <img
+      alt="Test name"
+      src="http://www.placecage.com/600/600"
+    />
+    <figcaption>
+      Test name
+    </figcaption>
+  </figure>
+</DocumentFragment>
+`;
